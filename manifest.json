@@ -45,6 +45,7 @@
                 "name": "pixabay",
                 "type": "string",
                 "example": "123456abc",
+                "optional": true,
                 "help": {
                     "en": "Optional: a Pixabay API key will let you chose a background by entering keywords.",
                     "fr": "Optionnel : une clé d’API Pixabay vous permettra de choisir un fond d’écran en entrant un mot clé."
@@ -54,6 +55,7 @@
                 "name": "googleYoutube",
                 "type": "string",
                 "example": "123456abc",
+                "optional": true,
                 "help": {
                     "en": "Optional: a Google API key will let you insert videos from Youtube on your Digiscreen",
                     "fr": "Optionnel : une clé d’API Google vous permettra d’afficher des vidéos de Youtube sur votre Digiscreen."
