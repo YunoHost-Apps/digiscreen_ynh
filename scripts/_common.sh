@@ -5,7 +5,8 @@
 #=================================================
 
 # dependencies used by the app
-#pkg_dependencies="php$YNH_DEFAULT_PHP_VERSION-sqlite3"
+pkg_dependencies=""
+nodejs_version="14.19.3"
 
 #=================================================
 # PERSONAL HELPERS
