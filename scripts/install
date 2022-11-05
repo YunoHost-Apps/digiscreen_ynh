@@ -161,6 +161,7 @@ cd $working_path
 echo "$pixabay" >> .env
 echo "googleYoutube" >> .env
 
+ynh_install_nodejs --nodejs_version=$nodejs_version
 ynh_use_nodejs
 ynh_npm install
 ynh_npm run build
