@@ -156,6 +156,11 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 working_path=/tmp/$app
 ynh_setup_source --dest_dir="$working_path"
 
+cd $working_path
+
+echo "$pixabay" >> .env
+echo "googleYoutube" >> .env
+
 ynh_use_nodejs
 ynh_npm install
 ynh_npm run build
