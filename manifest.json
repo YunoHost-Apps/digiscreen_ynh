@@ -22,7 +22,7 @@
         "email": "xxxxx"
     },
     "requirements": {
-        "yunohost": ">= 11.0.10.2"
+        "yunohost": ">= 11.0.10.1"
     },
     "multi_instance": true,
     "services": [
