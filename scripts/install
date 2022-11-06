@@ -166,7 +166,8 @@ ynh_use_nodejs
 ynh_npm install
 ynh_npm run build
 
-mv $working_path $final_path
+mv $working_path/dist $final_path
+rm -R $working_path
 
 # FIXME: this should be managed by the core in the future
 # Here, as a packager, you may have to tweak the ownerhsip/permissions
