@@ -30,6 +30,8 @@ path_url=$YNH_APP_ARG_PATH
 is_public=$YNH_APP_ARG_IS_PUBLIC
 #language=$YNH_APP_ARG_LANGUAGE
 #password=$YNH_APP_ARG_PASSWORD
+pixabay=$YNH_APP_ARG_PIXABAY
+googleYoutube=$YNH_APP_ARG_GOOGLEYOUTUBE
 
 ### If it's a multi-instance app, meaning it can be installed several times independently
 ### The id of the app as stated in the manifest is available as $YNH_APP_ID
@@ -111,7 +113,7 @@ ynh_script_progression --message="Installing dependencies..." --weight=1
 ###		- As well as the section "REINSTALL DEPENDENCIES" in the restore script
 ###		- And the section "UPGRADE DEPENDENCIES" in the upgrade script
 
-ynh_install_app_dependencies $pkg_dependencies
+#ynh_install_app_dependencies $pkg_dependencies
 
 #=================================================
 # CREATE DEDICATED USER
@@ -151,7 +153,21 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$final_path"
+working_path=/tmp/$app
+ynh_setup_source --dest_dir="$working_path"
+
+cd $working_path
+
+echo VUE_APP_PIXABAY_API_KEY="$pixabay" >> .env
+echo VUE_APP_GOOGLE_API_KEY="$googleYoutube" >> .env
+
+ynh_install_nodejs --nodejs_version=$nodejs_version
+ynh_use_nodejs
+ynh_npm install
+ynh_npm run build
+
+mv $working_path/dist $final_path
+ynh_secure_remove --file=$working_path
 
 # FIXME: this should be managed by the core in the future
 # Here, as a packager, you may have to tweak the ownerhsip/permissions
