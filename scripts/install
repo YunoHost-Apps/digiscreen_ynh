@@ -158,8 +158,8 @@ ynh_setup_source --dest_dir="$working_path"
 
 cd $working_path
 
-echo "$pixabay" >> .env
-echo "googleYoutube" >> .env
+echo VUE_APP_PIXABAY_API_KEY="$pixabay" >> .env
+echo VUE_APP_GOOGLE_API_KEY="$googleYoutube" >> .env
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
 ynh_use_nodejs
