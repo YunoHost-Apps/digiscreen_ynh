@@ -1,7 +1,0 @@
-SOURCE_URL=https://github.com/YunoHost-Apps/digiscreen_ynh/releases/download/0.6.4/digiscreen-0.6.4.zip
-SOURCE_SUM=92273e360e06639283ee9db746d1d53006af7ea405f1ecbe85a262b39eae6756
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=zip
-SOURCE_IN_SUBDIR=true
-#SOURCE_FILENAME=
-SOURCE_EXTRACT=true
