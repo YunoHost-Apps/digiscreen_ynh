@@ -47,7 +47,7 @@ then
 	fi
 
 	# upgrade...
-	rm -rf "$install_dir/www"
+	ynh_secure_remove --file="$install_dir/www"
 	mv "$install_dir/sources/dist" "$install_dir/www"
 
 	if [ -f "$install_dir/digiwords.db" ]; then
