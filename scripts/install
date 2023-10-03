@@ -15,6 +15,13 @@ source /usr/share/yunohost/helpers
 ynh_script_progression --message="Installing NodeJS..." --weight 3
 
 ynh_install_nodejs --nodejs_version="$nodejs_version"
+ynh_use_nodejs
+ynh_print_info "ynh_npm alias=$(which ynh_npm || true)"
+ynh_print_info "ynh_npm var=$ynh_npm"
+ynh_print_info "content of nodejs bin dir : $(ls -lah /opt/node_n/n/versions/node/$nodejs_version/bin || true)"
+ynh_exec_warn node --version || true
+ynh_exec_warn npm --version || true
+
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
