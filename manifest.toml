@@ -67,6 +67,9 @@ ram.runtime = "100M"
     url = "https://github.com/YunoHost-Apps/digiscreen_ynh/releases/download/0.6.4/digiscreen-0.6.4.zip"
     sha256 = "92273e360e06639283ee9db746d1d53006af7ea405f1ecbe85a262b39eae6756"
 
+    autoupdate.strategy = "latest_github_tag"
+    autoupdate.asset = "digiscreen.*.zip"
+
     [resources.system_user]
 
     [resources.install_dir]
