@@ -38,7 +38,7 @@ ram.runtime = "100M"
     type = "path"
     default = "/digiscreen"
 
-    [install.pixabay]
+    [install.apikey_pixabay]
     ask.en = "Your Pixabay API key"
     ask.fr = "Votre clé d’API Pixabay"
     help.en = "Optional: a Pixabay API key will let you chose a background by entering keywords."
@@ -47,7 +47,7 @@ ram.runtime = "100M"
     example = "123456abc"
     optional = true
 
-    [install.googleYoutube]
+    [install.apikey_google_youtube]
     ask.en = "Your Google API key"
     ask.fr = "Votre clé d’API Google"
     help.en = "Optional: a Google API key will let you insert videos from Youtube on your Digiscreen"

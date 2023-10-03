@@ -22,6 +22,20 @@ upgrade_type=$(ynh_check_app_version_changed)
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 
+if [[ -n "${googleYoutube:-}" ]]; then
+	# migrate camelCase to snake_case
+	apikey_google_youtube="$googleYoutube"
+	ynh_app_setting_set --app="$app" --key="apikey_google_youtube" --value="$apikey_google_youtube"
+	ynh_app_setting_delete --app="$app" --key="googleYoutube"
+fi
+
+if [[ -n "${pixabay:-}" ]]; then
+	# migrate camelCase to snake_case
+	apikey_pixabay="$pixabay"
+	ynh_app_setting_set --app="$app" --key="apikey_pixabay" --value="$apikey_pixabay"
+	ynh_app_setting_delete --app="$app" --key="pixabay"
+fi
+
 #=================================================
 # INSTALL NODEJS
 #=================================================
