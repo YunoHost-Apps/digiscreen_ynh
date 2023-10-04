@@ -4,8 +4,8 @@ packaging_format = 2
 
 id = "digiscreen"
 name = "Digiscreen"
-description.en = "An interactive wallpaper for the classroom, face-to-face or distant"
-description.fr = "Un fond d'écran interactif pour la salle de classe en présence ou à distance."
+description.en = "Interactive wallpaper for the classroom, face-to-face or distant"
+description.fr = "Fond d'écran interactif pour la salle de classe en présence ou à distance"
 
 version = "0.6.4~ynh1"
 
@@ -21,7 +21,7 @@ code = "https://codeberg.org/ladigitale/digiscreen"
 fund = "https://opencollective.com/ladigitale"
 
 [integration]
-yunohost = ">= 11.0.10"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
 ldap = "not_relevant"
@@ -50,15 +50,15 @@ ram.runtime = "100M"
     [install.apikey_google_youtube]
     ask.en = "Your Google API key"
     ask.fr = "Votre clé d’API Google"
-    help.en = "Optional: a Google API key will let you insert videos from Youtube on your Digiscreen"
-    help.fr = "Optionnel : une clé d’API Google vous permettra d’afficher des vidéos de Youtube sur votre Digiscreen."
+    help.en = "Optional: a Google API key will let you insert videos from YouTube on your Digiscreen"
+    help.fr = "Optionnel : une clé d’API Google vous permettra d’afficher des vidéos de YouTube sur votre Digiscreen."
     type = "string"
     example = "123456abc"
     optional = true
 
     [install.init_main_permission]
-    help.en = "If public, any visitor can use this app and thus will benefit from your API keys for Pixabay and Youtube."
-    help.fr = "Si l’application est publique, n’importe quel visiteur pourra utiliser cette application et bénéficiera donc de vos clés d’API pour Pixabay et Youtube."
+    help.en = "If public, any visitor can use this app and thus will benefit from your API keys for Pixabay and YouTube."
+    help.fr = "Si l’application est publique, n’importe quel visiteur pourra utiliser cette application et bénéficiera donc de vos clés d’API pour Pixabay et YouTube."
     type = "group"
     default = "visitors"
 
