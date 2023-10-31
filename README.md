@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # Digiscreen for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/digiscreen.svg)](https://dash.yunohost.org/appci/app/digiscreen) ![Working status](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/digiscreen.svg)](https://dash.yunohost.org/appci/app/digiscreen) ![Working status](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
+
 [![Install Digiscreen with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=digiscreen)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -26,7 +27,7 @@ An interactive wallpaper for the classroom, face-to-face or distant
 * Official user documentation: <https://ladigitale.dev/blog/digiscreen-un-fond-d-ecran-interactif-pour-la-classe>
 * Official admin documentation: <https://codeberg.org/ladigitale/digiscreen/src/branch/main/README.md>
 * Upstream app code repository: <https://codeberg.org/ladigitale/digiscreen>
-* YunoHost documentation for this app: <https://yunohost.org/app_digiscreen>
+* YunoHost Store: <https://apps.yunohost.org/app/digiscreen>
 * Report a bug: <https://github.com/YunoHost-Apps/digiscreen_ynh/issues>
 
 ## Developer info
