@@ -48,6 +48,7 @@ Conçu pour accompagner les enseignants (de langues, notamment) dans l'animation
 * Official user documentation: <https://ladigitale.dev/blog/digiscreen-un-fond-d-ecran-interactif-pour-la-classe>
 * Official admin documentation: <https://codeberg.org/ladigitale/digiscreen/src/branch/main/README.md>
 * Upstream app code repository: <https://codeberg.org/ladigitale/digiscreen>
+* YunoHost Store: <https://apps.yunohost.org/app/digiscreen>
 * Report a bug: <https://github.com/YunoHost-Apps/digiscreen_ynh/issues>
 
 ## Developer info
