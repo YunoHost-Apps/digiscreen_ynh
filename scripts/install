@@ -24,6 +24,10 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir/sources"
 
+chmod 750 "$install_dir"
+chmod -R o-rwx "$install_dir"
+chown -R "$app:www-data" "$install_dir"
+
 _digiscreen_build
 
 mv "$install_dir/sources/dist" "$install_dir/www"
@@ -39,11 +43,6 @@ chown -R "$app:www-data" "$install_dir"
 ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 
 ynh_add_nginx_config
-
-#=================================================
-# PHP-FPM CONFIGURATION
-#=================================================
-ynh_script_progression --message="Configuring PHP-FPM..." --weight=1
 
 ynh_add_fpm_config
 

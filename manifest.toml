@@ -24,8 +24,11 @@ fund = "https://opencollective.com/ladigitale"
 yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
+
 ldap = "not_relevant"
+
 sso = "not_relevant"
+
 disk = "100M"
 ram.build = "500M"
 ram.runtime = "100M"

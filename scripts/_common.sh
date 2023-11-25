@@ -16,8 +16,8 @@ _digiscreen_build() {
         echo "VUE_APP_GOOGLE_API_KEY=$apikey_google_youtube" >> .env
 
         ynh_use_nodejs
-        "$ynh_npm" install
-        "$ynh_npm" run build
+        ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH $ynh_npm install
+        ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH $ynh_npm run build
     popd
 }
 
