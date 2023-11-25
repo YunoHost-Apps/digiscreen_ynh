@@ -4,7 +4,7 @@
     "packaging_format": 1,
     "description": {
         "en": "An interactive wallpaper for the classroom, face-to-face or distant",
-        "fr": "Un fond d'écran interactif pour la salle de classe en présence ou à distance."
+        "fr": "Un fond d'écran interactif pour la salle de classe en présence ou à distance"
     },
     "version": "0.6.4~ynh1",
     "url": "https://ladigitale.dev/",
@@ -22,7 +22,7 @@
         "email": "xxxxx"
     },
     "requirements": {
-        "yunohost": ">= 11.0.10.1"
+        "yunohost": ">= 11.2"
     },
     "multi_instance": true,
     "services": [
