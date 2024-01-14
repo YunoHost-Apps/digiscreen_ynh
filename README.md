@@ -34,7 +34,7 @@ Conçu pour accompagner les enseignants (de langues, notamment) dans l'animation
 * et d'autres à venir 🙂.
 
 
-**Shipped version:** 0.6.4~ynh1
+**Shipped version:** 0.9.13~ynh1
 
 **Demo:** https://ladigitale.dev/digiscreen/
 
