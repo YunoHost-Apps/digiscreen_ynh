@@ -7,7 +7,7 @@ name = "Digiscreen"
 description.en = "Interactive wallpaper for the classroom, face-to-face or distant"
 description.fr = "Fond d'écran interactif pour la salle de classe en présence ou à distance"
 
-version = "0.6.4~ynh1"
+version = "0.9.13~ynh1"
 
 maintainers = ["Pierre-Amiel Giraud"]
 
@@ -68,13 +68,11 @@ ram.runtime = "100M"
 [resources]
     [resources.sources.main]
     url = "https://codeberg.org/ladigitale/digiscreen/releases/download/0.9.13/digiscreen-v0.9.13.zip"
-    sha256 = ""
+    sha256 = "9e0864e8b14140b5d8d7257b380bf65d4e8dfde8a467492c6516a30b53209ed5"
 
     [resources.system_user]
 
     [resources.install_dir]
-
-    [resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
@@ -82,11 +80,5 @@ ram.runtime = "100M"
     [resources.ports]
 
     [resources.apt]
-    packages = [
-        "mariadb-server",
-        "php8.2",
-        "php8.2-fpm",
-    ]
+    packages = ["php8.2-fpm"]
 
-    [resources.database]
-    type = "mysql"
