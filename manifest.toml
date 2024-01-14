@@ -34,6 +34,7 @@ ram.build = "500M"
 ram.runtime = "100M"
 
 [install]
+
     [install.domain]
     type = "domain"
 
@@ -41,27 +42,7 @@ ram.runtime = "100M"
     type = "path"
     default = "/digiscreen"
 
-    [install.apikey_pixabay]
-    ask.en = "Your Pixabay API key"
-    ask.fr = "Votre clé d’API Pixabay"
-    help.en = "Optional: a Pixabay API key will let you chose a background by entering keywords."
-    help.fr = "Optionnel : une clé d’API Pixabay vous permettra de choisir un fond d’écran en entrant un mot clé."
-    type = "string"
-    example = "123456abc"
-    optional = true
-
-    [install.apikey_google_youtube]
-    ask.en = "Your Google API key"
-    ask.fr = "Votre clé d’API Google"
-    help.en = "Optional: a Google API key will let you insert videos from YouTube on your Digiscreen"
-    help.fr = "Optionnel : une clé d’API Google vous permettra d’afficher des vidéos de YouTube sur votre Digiscreen."
-    type = "string"
-    example = "123456abc"
-    optional = true
-
     [install.init_main_permission]
-    help.en = "If public, any visitor can use this app and thus will benefit from your API keys for Pixabay and YouTube."
-    help.fr = "Si l’application est publique, n’importe quel visiteur pourra utiliser cette application et bénéficiera donc de vos clés d’API pour Pixabay et YouTube."
     type = "group"
     default = "visitors"
 
@@ -80,5 +61,5 @@ ram.runtime = "100M"
     [resources.ports]
 
     [resources.apt]
-    packages = ["php8.2-fpm"]
+    packages = "php8.2-sqlite3"
 

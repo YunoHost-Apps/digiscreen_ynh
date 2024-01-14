@@ -16,64 +16,12 @@ source /usr/share/yunohost/helpers
 upgrade_type=$(ynh_check_app_version_changed)
 
 #=================================================
-# STANDARD UPGRADE STEPS
-#=================================================
-# ENSURE DOWNWARD COMPATIBILITY
-#=================================================
-ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
-
-# migrate camelCase to snake_case
-if [[ -z "$apikey_pixabay" ]]; then
-	# migrate camelCase to snake_case
-	pixabay="$(ynh_app_setting_get --app="$app" --key=pixabay)"
-	apikey_pixabay="$pixabay"
-	ynh_app_setting_set --app="$app" --key="apikey_pixabay" --value="$apikey_pixabay"
-	ynh_app_setting_delete --app="$app" --key="pixabay"
-fi
-
-if [[ -z "$apikey_google_youtube" ]]; then
-	googleYoutube="$(ynh_app_setting_get --app="$app" --key=googleYoutube)"
-	apikey_google_youtube="$googleYoutube"
-	ynh_app_setting_set --app="$app" --key="apikey_google_youtube" --value="$apikey_google_youtube"
-	ynh_app_setting_delete --app="$app" --key="googleYoutube"
-fi
-
-#=================================================
-# INSTALL NODEJS
-#=================================================
-ynh_script_progression --message="Installing NodeJS..." --weight 3
-
-ynh_install_nodejs --nodejs_version="$nodejs_version"
-
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
+ynh_script_progression --message="Upgrading source files..." --weight=1
 
-if [ "$upgrade_type" == "UPGRADE_APP" ]
-then
-	ynh_script_progression --message="Upgrading source files..." --weight=1
+ynh_setup_source --dest_dir="$install_dir" --keep="inc/digiwords.db"
 
-	ynh_setup_source --dest_dir="$install_dir/sources"
-
-	_digiscreen_build
-
-	# backup...
-	if [ -f "$install_dir/www/inc/digiwords.db" ]; then
-		mv "$install_dir/www/inc/digiwords.db" "$install_dir"
-	fi
-
-	# upgrade...
-	ynh_secure_remove --file="$install_dir/www"
-	mv "$install_dir/sources/dist" "$install_dir/www"
-
-	if [ -f "$install_dir/digiwords.db" ]; then
-		# restore
-		mkdir -p "$install_dir/www/inc"
-		mv "$install_dir/digiwords.db" "$install_dir/www/inc"
-	fi
-fi
-
-chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
 chown -R "$app:www-data" "$install_dir"
 
@@ -82,7 +30,6 @@ chown -R "$app:www-data" "$install_dir"
 #=================================================
 ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=1
 
-# Create a dedicated NGINX config
 ynh_add_nginx_config
 
 ynh_add_fpm_config
