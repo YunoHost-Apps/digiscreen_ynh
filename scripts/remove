@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 #=================================================
 # GENERIC START
@@ -17,20 +17,8 @@ ynh_script_progression --message="Removing NGINX web server configuration..." --
 # Remove the dedicated NGINX config
 ynh_remove_nginx_config
 
-#=================================================
-# REMOVE PHP-FPM CONFIGURATION
-#=================================================
-ynh_script_progression --message="Removing PHP-FPM configuration..." --weight=1
-
 # Remove the dedicated PHP-FPM config
 ynh_remove_fpm_config
-
-#=================================================
-# SPECIFIC REMOVE
-#=================================================
-# REMOVE VARIOUS FILES
-#=================================================
-ynh_script_progression --message="Removing various files..." --weight=1
 
 # Remove the log files
 ynh_secure_remove --file="/var/log/$app"
