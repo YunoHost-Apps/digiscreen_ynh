@@ -16,11 +16,32 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-An interactive wallpaper for the classroom, face-to-face or distant
+Digiscreen est un fond d'écran interactif pour la salle de classe en présence ou à distance.
 
-**Shipped version:** 0.6.4~ynh1
+Conçu pour accompagner les enseignants (de langues, notamment) dans l'animation de leurs cours, Digiscreen propose un ensemble d'outils pratiques sous forme de modules :
+
+* générateur de codes QR ;
+* affichage de textes, d'images et de fichiers audio en ligne ;
+* dessin ;
+* diffusion et découpage de vidéos YouTube ;
+* chronomètre et compte à rebours ;
+* générateur de nuages de mots ;
+* synthèse vocale ;
+* exercices interactifs : remise en ordre et texte à trous ;
+* contenus intégrés : sites Web, documents en ligne et contenus interactifs (LearningApps par exemple) ;
+* capture d'écran ;
+* annotation ;
+* et d'autres à venir 🙂.
+
+
+**Shipped version:** 0.9.13~ynh1
 
 **Demo:** https://ladigitale.dev/digiscreen/
+
+## Screenshots
+
+![Screenshot of Digiscreen](./doc/screenshots/digiscreen.jpg)
+
 ## Documentation and resources
 
 * Official app website: <https://ladigitale.dev/>
