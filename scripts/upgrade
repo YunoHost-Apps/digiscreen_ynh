@@ -18,11 +18,12 @@ ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 
 # Renamed settings
 if [[ -z "${api_key_pixabay:-}" ]]; then
-    api_key_pixabay="$pixabay"
+    api_key_pixabay="${pixabay:-}"
     ynh_app_setting_delete --app="$app" --key=pixabay
     ynh_app_setting_set --app="$app" --key="api_key_pixabay" --value="$api_key_pixabay"
-
-    api_key_google_youtube="$googleYoutube"
+fi
+if [[ -z "${api_key_google_youtube:-}" ]]; then
+    api_key_google_youtube="${googleYoutube:-}"
     ynh_app_setting_delete --app="$app" --key=googleYoutube
     ynh_app_setting_set --app="$app" --key="api_key_google_youtube" --value="$api_key_google_youtube"
 fi
@@ -40,7 +41,7 @@ ynh_install_nodejs --nodejs_version="$nodejs_version"
 ynh_script_progression --message="Upgrading source files..." --weight=1
 
 # Download, check integrity, uncompress and patch the source
-ynh_setup_source --dest_dir="$install_dir" --full_replace=1
+ynh_setup_source --dest_dir="$install_dir/source" --full_replace=1
 
 # Patch broken dependency
 sed -i 's|"v-calendar": "^2.3.0"|"v-calendar": "2.3.0"|' "$install_dir/source/package.json"
