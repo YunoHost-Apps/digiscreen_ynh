@@ -8,5 +8,3 @@ test_format = 1.0
 
     args.api_key_google_youtube = ""
     args.api_key_pixabay = ""
-
-    test_upgrade_from.3bb42cd71bcca77b7f642859bf5048317586a500.name = "First release"
