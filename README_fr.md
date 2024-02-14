@@ -19,7 +19,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 Un fond d'écran interactif pour la salle de classe en présence ou à distance.
 
 
-**Version incluse :** 0.6.4~ynh1
+**Version incluse :** 0.9.15~ynh1
 
 **Démo :** https://ladigitale.dev/digiscreen/
 ## Documentations et ressources

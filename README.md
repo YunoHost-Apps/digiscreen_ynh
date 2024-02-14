@@ -19,7 +19,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 An interactive wallpaper for the classroom, face-to-face or distant
 
 
-**Shipped version:** 0.6.4~ynh1
+**Shipped version:** 0.9.15~ynh1
 
 **Demo:** https://ladigitale.dev/digiscreen/
 ## Documentation and resources
