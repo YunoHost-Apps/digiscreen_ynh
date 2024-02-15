@@ -2,9 +2,11 @@ test_format = 1.0
 
 [default]
 
+    args.api_key_google_youtube = ""
+    args.api_key_pixabay = ""
+
     # -------------------------------
     # Commits to test upgrade from
     # -------------------------------
 
-    args.api_key_google_youtube = ""
-    args.api_key_pixabay = ""
+    test_upgrade_from.73052c4c.name = "Upgrade from 0.6.4~ynh1"
