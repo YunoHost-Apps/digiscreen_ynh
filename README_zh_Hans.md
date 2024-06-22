@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 Digiscreen
+# YunoHost 上的 Digiscreen
 
 [![集成程度](https://dash.yunohost.org/integration/digiscreen.svg)](https://dash.yunohost.org/appci/app/digiscreen) ![工作状态](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
 
@@ -19,7 +19,7 @@
 An interactive wallpaper for the classroom, face-to-face or distant
 
 
-**分发版本：** 0.9.18~ynh1
+**分发版本：** 1.0.0~ynh1
 
 **演示：** <https://ladigitale.dev/digiscreen/>
 ## 文档与资源
