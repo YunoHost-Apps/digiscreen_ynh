@@ -19,7 +19,7 @@
 An interactive wallpaper for the classroom, face-to-face or distant
 
 
-**分发版本：** 0.9.18~ynh1
+**分发版本：** 1.0.0~ynh1
 
 **演示：** <https://ladigitale.dev/digiscreen/>
 ## 文档与资源
