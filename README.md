@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Digiscreen for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/digiscreen.svg)](https://dash.yunohost.org/appci/app/digiscreen) ![Working status](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/digiscreen.svg)](https://ci-apps.yunohost.org/ci/apps/digiscreen/) ![Working status](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
 
 [![Install Digiscreen with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=digiscreen)
 

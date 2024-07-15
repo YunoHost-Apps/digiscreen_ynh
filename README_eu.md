@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Digiscreen YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/digiscreen.svg)](https://dash.yunohost.org/appci/app/digiscreen) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/digiscreen.svg)](https://ci-apps.yunohost.org/ci/apps/digiscreen/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
 
 [![Instalatu Digiscreen YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=digiscreen)
 

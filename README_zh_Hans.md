@@ -5,7 +5,7 @@
 
 # YunoHost 上的 Digiscreen
 
-[![集成程度](https://dash.yunohost.org/integration/digiscreen.svg)](https://dash.yunohost.org/appci/app/digiscreen) ![工作状态](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/digiscreen.svg)](https://ci-apps.yunohost.org/ci/apps/digiscreen/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
 
 [![使用 YunoHost 安装 Digiscreen](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=digiscreen)
 
