@@ -1,90 +1,79 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# STANDARD UPGRADE STEPS
-#=================================================
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
-ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
+ynh_script_progression "Ensuring downward compatibility..."
 
 # Renamed settings
 if [[ -z "${api_key_pixabay:-}" ]]; then
     api_key_pixabay="${pixabay:-}"
-    ynh_app_setting_delete --app="$app" --key=pixabay
-    ynh_app_setting_set --app="$app" --key="api_key_pixabay" --value="$api_key_pixabay"
+    ynh_app_setting_delete --key=pixabay
+    ynh_app_setting_set --key="api_key_pixabay" --value="$api_key_pixabay"
 fi
 if [[ -z "${api_key_google_youtube:-}" ]]; then
     api_key_google_youtube="${googleYoutube:-}"
-    ynh_app_setting_delete --app="$app" --key=googleYoutube
-    ynh_app_setting_set --app="$app" --key="api_key_google_youtube" --value="$api_key_google_youtube"
+    ynh_app_setting_delete --key=googleYoutube
+    ynh_app_setting_set --key="api_key_google_youtube" --value="$api_key_google_youtube"
 fi
 
 #=================================================
 # INSTALL NODEJS
 #=================================================
-ynh_script_progression --message="Installing NodeJS..." --weight=1
+ynh_script_progression "Installing NodeJS..."
 
-ynh_install_nodejs --nodejs_version="$nodejs_version"
+ynh_nodejs_install
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Upgrading source files..." --weight=1
+ynh_script_progression "Upgrading source files..."
 
 # Download, check integrity, uncompress and patch the source
-ynh_setup_source --dest_dir="$install_dir/source" --full_replace=1
+ynh_setup_source --dest_dir="$install_dir/source" --full_replace
 
 # Patch broken dependency
 sed -i 's|"v-calendar": "^2.3.0"|"v-calendar": "2.3.0"|' "$install_dir/source/package.json"
 
-chmod 750 "$install_dir"
-chmod -R o-rwx "$install_dir"
-chown -R "$app:www-data" "$install_dir"
-
+#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 750 "$install_dir"
+#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
+#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R "$app:www-data" "$install_dir"
 #=================================================
 # NODEJS BUILD
 #=================================================
-ynh_script_progression --message="Building $app..." --weight=3
+ynh_script_progression "Building $app..."
 
 pushd "$install_dir/source"
     echo VUE_APP_PIXABAY_API_KEY="$api_key_pixabay" >> .env
     echo VUE_APP_GOOGLE_API_KEY="$api_key_google_youtube" >> .env
 
-    ynh_use_nodejs
-    ynh_exec_as "$app" "$ynh_node_load_PATH" "$ynh_npm" install
-    ynh_exec_as "$app" "$ynh_node_load_PATH" "$ynh_npm" run build
+    ynh_exec_as_app node_load_PATH" npm install
+    ynh_exec_as_app node_load_PATH" npm run build
 popd
 
-ynh_secure_remove --file="$install_dir/www"
+ynh_safe_rm "$install_dir/www"
 mv "$install_dir/source/dist" "$install_dir/www"
-ynh_secure_remove --file="$install_dir/source"
+ynh_safe_rm "$install_dir/source"
 
-chmod 750 "$install_dir"
-chmod -R o-rwx "$install_dir"
-chown -R "$app:www-data" "$install_dir"
-
+#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 750 "$install_dir"
+#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
+#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R "$app:www-data" "$install_dir"
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
+ynh_script_progression "Upgrading system configurations related to $app..."
 
 # Create a dedicated NGINX config
-ynh_add_nginx_config
+ynh_config_add_nginx
 
 # Create a dedicated PHP-FPM config
-ynh_add_fpm_config
+ynh_config_add_phpfpm
 
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of $app completed" --last
+ynh_script_progression "Upgrade of $app completed"
