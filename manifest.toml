@@ -20,7 +20,7 @@ userdoc = "https://ladigitale.dev/blog/digiscreen-un-fond-d-ecran-interactif-pou
 code = "https://codeberg.org/ladigitale/digiscreen"
 
 [integration]
-yunohost = ">= 11.2.18"
+yunohost = ">= 11.2.29"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
