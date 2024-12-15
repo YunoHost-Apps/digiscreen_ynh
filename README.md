@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # Digiscreen for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/digiscreen.svg)](https://ci-apps.yunohost.org/ci/apps/digiscreen/) ![Working status](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/digiscreen)](https://ci-apps.yunohost.org/ci/apps/digiscreen/)
+![Working status](https://apps.yunohost.org/badge/state/digiscreen)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/digiscreen)
 
 [![Install Digiscreen with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=digiscreen)
 
@@ -19,7 +21,7 @@ It shall NOT be edited by hand.
 An interactive wallpaper for the classroom, face-to-face or distant
 
 
-**Shipped version:** 1.0.0~ynh2
+**Shipped version:** 1.0.1~ynh1
 
 **Demo:** <https://ladigitale.dev/digiscreen/>
 ## Documentation and resources
