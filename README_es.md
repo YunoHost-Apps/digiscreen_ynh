@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # Digiscreen para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/digiscreen.svg)](https://ci-apps.yunohost.org/ci/apps/digiscreen/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/digiscreen)](https://ci-apps.yunohost.org/ci/apps/digiscreen/)
+![Estado funcional](https://apps.yunohost.org/badge/state/digiscreen)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/digiscreen)
 
 [![Instalar Digiscreen con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=digiscreen)
 
@@ -19,7 +21,7 @@ No se debe editar a mano.
 An interactive wallpaper for the classroom, face-to-face or distant
 
 
-**Versión actual:** 1.0.0~ynh2
+**Versión actual:** 1.0.1~ynh1
 
 **Demo:** <https://ladigitale.dev/digiscreen/>
 ## Documentaciones y recursos
@@ -33,7 +35,7 @@ An interactive wallpaper for the classroom, face-to-face or distant
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/digiscreen_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/digiscreen_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 

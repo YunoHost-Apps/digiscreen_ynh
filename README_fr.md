@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # Digiscreen pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/digiscreen.svg)](https://ci-apps.yunohost.org/ci/apps/digiscreen/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/digiscreen.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/digiscreen.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/digiscreen)](https://ci-apps.yunohost.org/ci/apps/digiscreen/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/digiscreen)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/digiscreen)
 
 [![Installer Digiscreen avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=digiscreen)
 
@@ -19,7 +21,7 @@ Il NE doit PAS être modifié à la main.
 Un fond d'écran interactif pour la salle de classe en présence ou à distance.
 
 
-**Version incluse :** 1.0.0~ynh2
+**Version incluse :** 1.0.1~ynh1
 
 **Démo :** <https://ladigitale.dev/digiscreen/>
 ## Documentations et ressources
