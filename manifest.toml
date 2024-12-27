@@ -64,7 +64,7 @@ ram.runtime = "50M"
 [resources]
     [resources.sources.main]
     url = "https://codeberg.org/ladigitale/digiscreen/archive/1.0.1.tar.gz"
-    sha256 = "082b79f73794f3d1440304e9a54be99c0280fa9523126dd6be5c94c424757c78"
+    sha256 = "43e0acbe9031977e78999414f44455a99c62ab06f5989aa959bed1189a6f020e"
     autoupdate.strategy = "latest_forgejo_release"
 
     [resources.system_user]
