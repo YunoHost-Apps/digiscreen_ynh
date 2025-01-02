@@ -21,7 +21,7 @@ Il NE doit PAS être modifié à la main.
 Un fond d'écran interactif pour la salle de classe en présence ou à distance.
 
 
-**Version incluse :** 1.0.1~ynh1
+**Version incluse :** 1.0.2~ynh1
 
 **Démo :** <https://ladigitale.dev/digiscreen/>
 ## Documentations et ressources
