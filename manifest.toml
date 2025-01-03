@@ -7,7 +7,7 @@ name = "Digiscreen"
 description.en = "An interactive wallpaper for the classroom, face-to-face or distant"
 description.fr = "Un fond d'écran interactif pour la salle de classe en présence ou à distance."
 
-version = "1.0.2~ynh1"
+version = "1.0.3~ynh1"
 
 maintainers = ["Pierre-Amiel Giraud"]
 
@@ -63,8 +63,8 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://codeberg.org/ladigitale/digiscreen/archive/1.0.2.tar.gz"
-    sha256 = "d6e793f021ad30030fc320d150dd56f600b6f51e03c48648e26a1b7b2dd4fbb4"
+    url = "https://codeberg.org/ladigitale/digiscreen/archive/1.0.3.tar.gz"
+    sha256 = "ad63c735cecc4e17753d26b2f72aad627d817a5d2a2dabd4ae39f704a0519305"
     autoupdate.strategy = "latest_forgejo_release"
 
     [resources.system_user]
