@@ -21,7 +21,7 @@ No se debe editar a mano.
 An interactive wallpaper for the classroom, face-to-face or distant
 
 
-**Versión actual:** 1.0.4~ynh1
+**Versión actual:** 1.0.5~ynh1
 
 **Demo:** <https://ladigitale.dev/digiscreen/>
 ## Documentaciones y recursos
