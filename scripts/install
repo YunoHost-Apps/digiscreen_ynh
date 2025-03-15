@@ -37,8 +37,8 @@ chown -R "$app:www-data" "$install_dir"
 ynh_script_progression --message="Building $app..." --weight=3
 
 pushd "$install_dir/source"
-    echo VUE_APP_PIXABAY_API_KEY="$api_key_pixabay" >> .env
-    echo VUE_APP_GOOGLE_API_KEY="$api_key_google_youtube" >> .env
+    echo VUE_APP_PIXABAY_API_KEY="$api_key_pixabay" >> .env.production
+    echo VUE_APP_GOOGLE_API_KEY="$api_key_google_youtube" >> .env.production
 
     ynh_use_nodejs
     ynh_exec_as "$app" "$ynh_node_load_PATH" "$ynh_npm" install
