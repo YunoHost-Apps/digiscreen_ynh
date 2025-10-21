@@ -30,6 +30,10 @@ ynh_setup_source --dest_dir="$install_dir/source" --full_replace
 # Patch broken dependency
 sed -i 's|"v-calendar": "^2.3.0"|"v-calendar": "2.3.0"|' "$install_dir/source/package.json"
 
+chmod 750 "$install_dir"
+chmod -R o-rwx "$install_dir"
+chown -R "$app:www-data" "$install_dir"
+
 #=================================================
 # NODEJS BUILD
 #=================================================
