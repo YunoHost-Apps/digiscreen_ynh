@@ -43,8 +43,8 @@ pushd "$install_dir/source"
     echo VUE_APP_PIXABAY_API_KEY="$api_key_pixabay" >> .env.production
     echo VUE_APP_GOOGLE_API_KEY="$api_key_google_youtube" >> .env.production
 
-    ynh_exec_as_app npm install
-    ynh_exec_as_app npm run build
+    ynh_hide_warnings ynh_exec_as_app npm install
+    ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
 ynh_safe_rm "$install_dir/www"
