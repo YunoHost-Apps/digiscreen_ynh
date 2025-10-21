@@ -7,7 +7,7 @@ name = "Digiscreen"
 description.en = "An interactive wallpaper for the classroom, face-to-face or distant"
 description.fr = "Un fond d'écran interactif pour la salle de classe en présence ou à distance."
 
-version = "1.0.8~ynh1"
+version = "1.0.8~ynh2"
 
 maintainers = ["Pierre-Amiel Giraud"]
 
