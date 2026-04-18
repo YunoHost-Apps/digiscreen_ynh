@@ -7,31 +7,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-# Download, check integrity, uncompress and patch the source
-ynh_setup_source --dest_dir="$install_dir/source"
-
-# Patch broken dependency
-sed -i 's|"v-calendar": "^2.3.0"|"v-calendar": "2.3.0"|' "$install_dir/source/package.json"
-
-chmod 750 "$install_dir"
-chmod -R o-rwx "$install_dir"
-chown -R "$app:www-data" "$install_dir"
-
-#=================================================
-# NODEJS BUILD
-#=================================================
-ynh_script_progression "Building $app..."
-
-pushd "$install_dir/source"
-    echo VUE_APP_PIXABAY_API_KEY="$api_key_pixabay" >> .env.production
-    echo VUE_APP_GOOGLE_API_KEY="$api_key_google_youtube" >> .env.production
-
-    ynh_hide_warnings ynh_exec_as_app npm install
-    ynh_hide_warnings ynh_exec_as_app npm run build
-popd
-
-mv "$install_dir/source/dist" "$install_dir/www"
-ynh_safe_rm "$install_dir/source"
+ynh_setup_source --dest_dir="$install_dir"
 
 chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
