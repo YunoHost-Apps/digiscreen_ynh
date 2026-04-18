@@ -8,6 +8,10 @@ source /usr/share/yunohost/helpers
 ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
+pushd "$install_dir"
+    echo VUE_APP_PIXABAY_API_KEY="$api_key_pixabay" >> .env
+    echo VUE_APP_GOOGLE_API_KEY="$api_key_google_youtube" >> .env
+popd
 
 chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
