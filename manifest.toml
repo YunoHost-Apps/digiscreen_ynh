@@ -12,7 +12,7 @@ version = "1.0.9~ynh1"
 maintainers = ["Pierre-Amiel Giraud"]
 
 [upstream]
-license = "GPL-3.0-only"
+license = "AGPL-3.0-only"
 website = "https://ladigitale.dev/"
 demo = "https://ladigitale.dev/digiscreen/"
 admindoc = "https://codeberg.org/ladigitale/digiscreen/src/branch/main/README.md"
