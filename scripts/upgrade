@@ -25,35 +25,22 @@ fi
 ynh_script_progression "Upgrading source files..."
 
 # Download, check integrity, uncompress and patch the source
-ynh_setup_source --dest_dir="$install_dir/source" --full_replace
-
-# Patch broken dependency
-sed -i 's|"v-calendar": "^2.3.0"|"v-calendar": "2.3.0"|' "$install_dir/source/package.json"
+ynh_setup_source --dest_dir="$install_dir" --full_replace
 
 chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================
-# NODEJS BUILD
+# RESTORE KEYS
 #=================================================
-ynh_script_progression "Building $app..."
+ynh_script_progression "Restore $app's keys..."
 
-pushd "$install_dir/source"
-    echo VUE_APP_PIXABAY_API_KEY="$api_key_pixabay" >> .env.production
-    echo VUE_APP_GOOGLE_API_KEY="$api_key_google_youtube" >> .env.production
-
-    ynh_hide_warnings ynh_exec_as_app npm install
-    ynh_hide_warnings ynh_exec_as_app npm run build
+pushd "$install_dir"
+    echo VUE_APP_PIXABAY_API_KEY="$api_key_pixabay" >> .env
+    echo VUE_APP_GOOGLE_API_KEY="$api_key_google_youtube" >> .env
 popd
 
-ynh_safe_rm "$install_dir/www"
-mv "$install_dir/source/dist" "$install_dir/www"
-ynh_safe_rm "$install_dir/source"
-
-chmod 750 "$install_dir"
-chmod -R o-rwx "$install_dir"
-chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
