@@ -12,7 +12,7 @@ version = "1.0.9~ynh1"
 maintainers = ["Pierre-Amiel Giraud"]
 
 [upstream]
-license = "GPL-3.0-only"
+license = "AGPL-3.0-only"
 website = "https://ladigitale.dev/"
 demo = "https://ladigitale.dev/digiscreen/"
 admindoc = "https://codeberg.org/ladigitale/digiscreen/src/branch/main/README.md"
@@ -64,10 +64,10 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://codeberg.org/ladigitale/digiscreen/archive/1.0.9.tar.gz"
-    sha256 = "46bf3db0171d0822edc19236dfff919d43fcafb897f537a41ef9e20112808d5b"
+    url = "https://codeberg.org/ladigitale/digiscreen/releases/download/1.1.1/digiscreen-v1.1.1.zip"
+    sha256 = "429a0f5943d6fb67adad05f0255fd90133d0a73792a9a06de9ce2e4f4ed90032"
     autoupdate.strategy = "latest_forgejo_release"
-
+    autoupdate.asset = "^digiscreen-v.*\\.zip$"
     [resources.system_user]
 
     [resources.install_dir]
@@ -82,12 +82,5 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = [
-        "mariadb-server",
-        "php8.2-fpm",
+        "php8.4-fpm",
     ]
-
-    [resources.database]
-    type = "mysql"
-
-    [resources.nodejs]
-    version = "22"
